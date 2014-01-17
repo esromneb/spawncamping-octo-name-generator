@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Spawncamping Octo Name Generator Example</title>
+    <script src="lib/spawncamping.octo.name.generator.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // This is just a helper function for displaying the output
+        function appendText(text) {
+            console.log("Generated: " + text);
+            document.f.t.value += "" + text + "\n";
+        }
+    </script>
+    <style>
+        p {margin-left:20px;}
+        pre {
+            background-color: #ccc;
+            padding: 10px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<h1>Spawncamping Octo Name Generator</h1>
+<p>The name for this library was itself chosen by GitHub's name generator</p>
+<form name="f">
+<h2>Output</h2>
+<textarea name="t" rows="30"></textarea>
+
+
+<pre>OctoNameGenerator.get()</pre>
+<input type="button" onClick="appendText( OctoNameGenerator.get() )" value="simple">
+
+<pre>OctoNameGenerator.get({wordSet:'industrial'})</pre>
+<input type="button" onClick="appendText( OctoNameGenerator.get({wordSet:'industrial'}) )" value="simple">
+</form>
+
+</html>
