@@ -30,9 +30,19 @@
 
           function sexyAppendText(text) {
 
-              var div = '<div class="alert alert-success">' + text + '</div>';
+              var uniqueId = "" + (new Date).getTime();
 
-              $('#picked-names').html(div);
+              var closeMe = function(){
+                  $('#' + uniqueId).remove();
+              };
+
+              var div = '<div class="alert alert-success" id="'+uniqueId'">' + text + '<span class="pull-right" id="c+'uniqueId'">X</span></div>';
+
+              $('#picked-names').prepend(div);
+
+              $('#picked-names').on('click',closeMe);
+
+//                      html(div);
           }
 
           // bind on window render
@@ -71,9 +81,10 @@
 
     <div id="content-wrapper">
       <div class="inner clearfix">
-          <div id="picked-names"></div>
+
         <section id="main-content">
-            <h1><input type="button" onClick="sexyAppendText( OctoNameGenerator.get('industrial') )" value="Click Here"></h1>
+            <h1><input type="button" onClick="sexyAppendText( OctoNameGenerator.get({wordSet:'industrial'}) )" value="Click Here"></h1>
+            <div id="picked-names"></div>
           <h1>
 <a name="spawncamping-octo-name-generator" class="anchor" href="#spawncamping-octo-name-generator"><span class="octicon octicon-link"></span></a>spawncamping-octo-name-generator</h1>
 
