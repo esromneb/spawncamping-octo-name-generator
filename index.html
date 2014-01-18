@@ -14,8 +14,12 @@
     <![endif]-->
 
 
+    //Bootstrap with these weird ass urls again
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
     <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="http://raw2.github.com/esromneb/spawncamping-octo-name-generator/master/lib/spawncamping.octo.name.generator.js"></script>
+    <script src="lib/spawncamping.octo.name.generator.js"></script>
 
       <script type="text/javascript">
           // This is just a helper function for displaying the output
@@ -25,7 +29,10 @@
           }
 
           function sexyAppendText(text) {
-              $('#picked-names').html(text);
+
+              var div = '<div class="alert alert-success">' + text + '</div>';
+
+              $('#picked-names').html(div);
           }
 
           // bind on window render
