@@ -13,6 +13,43 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="http://raw2.github.com/esromneb/spawncamping-octo-name-generator/master/lib/spawncamping.octo.name.generator.js"></script>
+
+      <script type="text/javascript">
+          // This is just a helper function for displaying the output
+          function appendText(text) {
+              console.log("Generated: " + text);
+              document.f.t.value = "" + text + "\n" + document.f.t.value;
+          }
+
+          function sexyAppendText(text) {
+              $('#picked-names').html(text);
+          }
+
+          // bind on window render
+          $( document ).ready(function() {
+              $('#click-this-span').on('click',function(e){
+                  console.log("click");
+              });
+          });
+      </script>
+
+
+      <style>
+
+          #click-this-span {
+
+              font-size: 27px;
+              padding: 10px;
+
+              /*max-width: 600px;*/
+          }
+      </style>
+
+
+
     <title>Spawncamping-octo-name-generator by esromneb</title>
   </head>
 
@@ -27,7 +64,9 @@
 
     <div id="content-wrapper">
       <div class="inner clearfix">
+          <div id="picked-names"></div>
         <section id="main-content">
+            <h1><input type="button" onClick="sexyAppendText( OctoNameGenerator.get('industrial') )" value="Click Here"></h1>
           <h1>
 <a name="spawncamping-octo-name-generator" class="anchor" href="#spawncamping-octo-name-generator"><span class="octicon octicon-link"></span></a>spawncamping-octo-name-generator</h1>
 
