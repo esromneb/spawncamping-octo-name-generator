@@ -36,11 +36,11 @@
                   $('#' + uniqueId).remove();
               };
 
-              var div = '<div class="alert alert-success" id="'+uniqueId'">' + text + '<span class="pull-right" id="c+'uniqueId'">X</span></div>';
+              var div = '<div class="alert alert-success" id="'+uniqueId+'">' + text + '<span class="pull-right" id="c'+uniqueId+'">X</span></div>';
 
               $('#picked-names').prepend(div);
 
-              $('#picked-names').on('click',closeMe);
+              $('#c' + uniqueId).on('click',closeMe);
 
 //                      html(div);
           }
