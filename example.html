@@ -1,0 +1,59 @@
+<html>
+<head>
+    <title>Spawncamping Octo Name Generator Example</title>
+    <script src="lib/spawncamping.octo.name.generator.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        // This is just a helper function for displaying the output
+        function appendText(text) {
+            console.log("Generated: " + text);
+            document.f.t.value = "" + text + "\n" + document.f.t.value;
+        }
+    </script>
+    <style>
+        p {margin-left:20px;}
+        pre {
+            background-color: #ccc;
+            padding: 10px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<h1>Spawncamping Octo Name Generator</h1>
+<p>The name for this library was itself chosen by GitHub's name generator</p>
+<form name="f">
+<h2>Output</h2>
+<textarea name="t" rows="15" cols="40"></textarea>
+
+<p>Default:
+<pre>OctoNameGenerator.get()</pre>
+<input type="button" onClick="appendText( OctoNameGenerator.get() )" value="generate!">
+</p>
+
+<p>Use industrial wordset:
+<pre>OctoNameGenerator.get({wordSet:'industrial'})</pre>
+<input type="button" onClick="appendText( OctoNameGenerator.get({wordSet:'industrial'}) )" value="generate!">
+</p>
+
+<p>Choose word types:
+<pre>OctoNameGenerator.get({wordSet:'industrial',wordTypes:['adjectives','nouns']})</pre>
+<input type="button" onClick="appendText( OctoNameGenerator.get({wordSet:'industrial',wordTypes:['adjectives','nouns']}) )" value="generate!">
+</p>
+
+<p>Choose word types and order:
+<pre>OctoNameGenerator.get({wordSet:'industrial',wordTypes:['nouns','verbs']})</pre>
+<input type="button" onClick="appendText( OctoNameGenerator.get({wordSet:'industrial',wordTypes:['nouns','verbs']}) )" value="generate!">
+</p>
+
+<p>Use geo wordset:
+<pre>OctoNameGenerator.get({wordSet:'geo'})</pre>
+<input type="button" onClick="appendText( OctoNameGenerator.get({wordSet:'geo'}) )" value="generate!">
+</p>
+
+
+
+
+
+</form>
+
+</html>
