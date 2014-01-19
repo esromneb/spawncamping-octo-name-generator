@@ -488,3 +488,8 @@ footer a:hover {
     font-weight: bold;
 }
 
+
+
+.list-group-item-heading.picked-name-style {
+    font-size: 28px;
+}
